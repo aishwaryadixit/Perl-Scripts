@@ -12,6 +12,17 @@ while ($opr) {
     print "Enter the arithmetic opr\n";
 
     $opr = <STDIN>;
+    chomp $opr;
+
+    if ($opr eq "h") {
+        my $res = $obj->history;
+        print ("History $res \n");
+        next;
+    }
+
+    elsif ($opr eq '') {
+        last;
+    }
 
     print "Enter 2 numbers\n";
 
@@ -21,7 +32,6 @@ while ($opr) {
 
     chomp $n1;
     chomp $n2;
-    chomp $opr;
 
     if ($opr eq "+") {
         print "Addition\n";
@@ -43,11 +53,6 @@ while ($opr) {
     elsif ($opr eq "/") {
         my $res = $obj->division ($n1, $n2);
         print ("Division Result: $res\n");
-    }
-
-    elsif ($opr eq "h") {
-        my $res = $obj->history;
-        print ("History $res \n");
     }
 }
 print " No operator provided. \n";
