@@ -54,11 +54,11 @@ while ($opr) {
         print ("Division Result: $res\n");
     }
 
-    elsif ($opr eq "**") {  # exponent
+    elsif ($opr eq "**") {    # exponent
         my $res = $obj->exponent ($n1, $n2);
         print ("Result = $res\n");
     }
-    
+
     elsif ($opr eq "r") {
         my $res = $obj->root ($n1, $n2);
         print ("Root = $res\n");
