@@ -37,7 +37,6 @@ while ($opr) {
         print "Addition\n";
         my $res = $obj->addition ($n1, $n2);
         print "Result: $res\n";
-
     }
 
     elsif ($opr eq "-") {
@@ -53,6 +52,16 @@ while ($opr) {
     elsif ($opr eq "/") {
         my $res = $obj->division ($n1, $n2);
         print ("Division Result: $res\n");
+    }
+
+    elsif ($opr eq "**") {  # exponent
+        my $res = $obj->exponent ($n1, $n2);
+        print ("Result = $res\n");
+    }
+    
+    elsif ($opr eq "r") {
+        my $res = $obj->root ($n1, $n2);
+        print ("Root = $res\n");
     }
 }
 print " No operator provided. \n";
